@@ -1,0 +1,14 @@
+Cloud Formation Walkthrough
+
+In AWS
+search : Cloud Formation 
+-> choose an existing template
+-> upload a template file
+
+open file in notepad 
+change key name to the current region key
+change image-id -> goto create instance -> browse more ami -> copy ami-id
+-> choose file -> upload -> next
+stack name -> next -> next -> submit
+
+Go check in Instance and check whether new instance is created or not 
