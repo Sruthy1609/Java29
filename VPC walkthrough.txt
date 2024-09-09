@@ -53,4 +53,13 @@ do above step in both regions
 
 In Terminal: 
 Go to public instance of both region 
+keygen-ssh
+cd .ssh
+cat id_rsa.pub 1st m/c public
+copy
+
+vim authorized_keys 2nd m/c public
+paste 
+
+scp index.html root@jo opposite terminal ke heading me likha hai wo ip dalna hai
 ping (jo opposite terminal ke heading me likha hai wo ip dalna hai, - ko hata ke . dalna )(private ip of opposite private instance)
