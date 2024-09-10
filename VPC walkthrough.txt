@@ -6,9 +6,8 @@ cd /var/www/html
 
 sudo su -
 vim tokyo-key
-chmod 400 tokyo-key.pem
+chmod 400 key-key.pem
 
-ping google.com
 
 
 ping google.com
