@@ -3,6 +3,7 @@ VPC
 
 yum install httpd
 cd /var/www/html
+echo "">.html
 
 sudo su -
 vim tokyo-key
