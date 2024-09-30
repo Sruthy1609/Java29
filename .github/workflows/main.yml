@@ -36,3 +36,13 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-south-1
+
+    - name: Build Docker image
+      run: |
+        docker build -t ecr-new-ecr .
+        docker tag ecr-new-ecr:latest 448049823514.dkr.ecr.ap-south-1.amazonaws.com/ecr-new-ecr:latest
+
+
+    - name: Push Docker image to ECR
+      run: |
+        docker push 448049823514.dkr.ecr.ap-south-1.amazonaws.com/ecr-new-ecr:latest    
