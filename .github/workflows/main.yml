@@ -49,4 +49,16 @@ jobs:
 
     - name: Push Docker image to ECR
       run: |
-        docker push 448049823514.dkr.ecr.ap-south-1.amazonaws.com/ecr-new-ecr:latest    
+        docker push 448049823514.dkr.ecr.ap-south-1.amazonaws.com/ecr-new-ecr:latest  
+
+
+    - name: Update kube config
+      run: aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --region $AWS_REGION
+ 
+    - name: Deploy to EKS
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}        
+        IMAGE_TAG: ${{ steps.commit.outputs.short }}
+      run: |
+        kubectl apply -f regapp-deploy.yml
+        kubectl apply -f regapp-service.yml
