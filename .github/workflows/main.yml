@@ -8,9 +8,9 @@ on:
  
 env:
 
-  ECR_REPOSITORY: 448049823514.dkr.ecr.ap-south-1.amazonaws.com
+  ECR_REPOSITORY: ecr-new-ecr
 
-  EKS_CLUSTER_NAME: ecr-new-ecr 
+  EKS_CLUSTER_NAME: my-cluster 
 
   AWS_REGION: ap-south-1
  
