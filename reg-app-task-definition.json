@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:448049823514:task-definition/sruthyandcomp:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:448049823514:task-definition/sruthytask:1",
     "containerDefinitions": [
         {
-            "name": "ecs-container",
-            "image": "448049823514.dkr.ecr.ap-south-1.amazonaws.com/ecr-new-ecr:latest",
+            "name": "containersru",
+            "image": "448049823514.dkr.ecr.ap-south-1.amazonaws.com/ecr-new-ecr:934db5861a16143fe3389001621bb56cd5a5c12c",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "ecs-container-80-tcp",
+                    "name": "containersru-80-tcp",
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/sruthyandcomp",
+                    "awslogs-group": "/ecs/sruthytask",
                     "mode": "non-blocking",
                     "awslogs-create-group": "true",
                     "max-buffer-size": "25m",
@@ -35,9 +35,9 @@
             "systemControls": []
         }
     ],
-    "family": "sruthyandcomp",
+    "family": "sruthytask",
     "taskRoleArn": "arn:aws:iam::448049823514:role/sru-roleecs",
-    "executionRoleArn": "arn:aws:iam::448049823514:role/sru-roleecs",
+    "executionRoleArn": "arn:aws:iam::448049823514:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
     "volumes": [],
@@ -88,7 +88,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-10-01T15:48:16.697Z",
+    "registeredAt": "2024-10-01T18:49:06.107Z",
     "registeredBy": "arn:aws:iam::448049823514:root",
     "tags": []
 }
