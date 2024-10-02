@@ -99,3 +99,4 @@ jobs:
         kubectl apply -f regapp-deploy.yml
 
         kubectl apply -f regapp-service.yml
+        #ll
