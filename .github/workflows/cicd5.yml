@@ -55,7 +55,7 @@ jobs:
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: sruthy-service-now
-          cluster: my-cluster
+          cluster: clusterecsnewnow
           wait-for-service-stability: true
 
 
