@@ -1,0 +1,31 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: my-deployment
+  labels: 
+     app: regapp
+ 
+spec:
+  replicas: 2 
+  selector:
+    matchLabels:
+      app: regapp
+ 
+  template:
+    metadata:
+      labels:
+        app: regapp
+    spec:
+      containers:
+      - name: regapp
+        image: 448049823514.dkr.ecr.ap-south-1.amazonaws.com/ecr-new-ecr:048f074ca3ce13b87da675b07d03b7352eb5b31d
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: ecr-registry-secret
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
