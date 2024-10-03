@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:448049823514:task-definition/sruthytasknewnow:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:448049823514:task-definition/sruthytasknewnow:16",
     "containerDefinitions": [
         {
             "name": "container-new-now",
-            "image": "448049823514.dkr.ecr.ap-south-1.amazonaws.com/ecr-new-ecr:b8d83034c6dea9d2d37db495e73c06de3c7ddc49",
+            "image": "448049823514.dkr.ecr.ap-south-1.amazonaws.com/ecr-new-ecr:170bb2b4c0e59029895acf32d709f7d5ad9180e6",
             "cpu": 0,
             "portMappings": [
                 {
@@ -16,10 +16,8 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -29,8 +27,7 @@
                     "max-buffer-size": "25m",
                     "awslogs-region": "ap-south-1",
                     "awslogs-stream-prefix": "ecs"
-                },
-                "secretOptions": []
+                }
             },
             "systemControls": []
         }
@@ -39,7 +36,7 @@
     "taskRoleArn": "arn:aws:iam::448049823514:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::448049823514:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 16,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -88,7 +85,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-10-02T07:54:31.538Z",
-    "registeredBy": "arn:aws:iam::448049823514:root",
+    "registeredAt": "2024-10-02T15:20:49.941Z",
+    "registeredBy": "arn:aws:iam::448049823514:user/sruthy",
     "tags": []
 }
